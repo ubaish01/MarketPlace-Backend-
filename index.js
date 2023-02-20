@@ -29,7 +29,7 @@ const connect = () => mongoose.connect(process.env.MONGO_URL,
     })
 // CONNECTING TO DATABASE 
 app.get("/",(req,res)=>{
-    res.send("working fine");
+    res.send("working fine man");
 })
 
 // ROOUTES
