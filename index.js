@@ -23,14 +23,17 @@ const connect = () => mongoose.connect(process.env.MONGO_URL,
     })
     .then(() => {
         console.log("Database connnected succeed....")
+        conn = true;
     })
     .catch(err => {
         console.log(err.message);
     })
 // CONNECTING TO DATABASE 
 app.get("/",(req,res)=>{
-    res.send("working fine man");
+    res.send("working fine man",conn);
 })
+
+var conn = false;
 
 // ROOUTES
 app.use(cors());
